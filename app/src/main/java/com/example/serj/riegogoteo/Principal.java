@@ -107,7 +107,7 @@ public class Principal extends ActionBarActivity {
                         System.out.println("EMPEZAR");
                     }else{
                         swEmpezar.setChecked(false);
-                        System.out.println("NO HAY LITROS INISIALES");
+                        System.out.println("NO HAY LITROS INICIALES");
                     }
                 } else {
                 // Se va a apagar. Comprobar que cumple condiciones para apagar. SI no volver
@@ -313,6 +313,10 @@ public class Principal extends ActionBarActivity {
             Intent intent = new Intent(Principal.this, Historial.class);
             startActivity(intent);
 
+        }
+        if (id == R.id.action_averia){
+            Intent intent = new Intent(Principal.this, Averia.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

@@ -20,6 +20,7 @@ public class Historial extends ActionBarActivity {
     private ArrayList<Lectura> lecturasFromGet = new ArrayList<Lectura>();
     Lectura lecturasGet;
     private Adaptador adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

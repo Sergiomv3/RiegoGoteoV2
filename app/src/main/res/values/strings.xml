@@ -3,5 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Historial riegos</string>
+    <string name="action_averia">Informar avería</string>
     <string name="title_activity_historial">Historial</string>
+    <string name="title_activity_averia">Averia</string>
 </resources>

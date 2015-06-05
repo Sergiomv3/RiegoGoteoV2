@@ -3,4 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".Principal">
     <item android:id="@+id/action_historial" android:title="@string/action_settings"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_averia" android:title="@string/action_averia"
+        android:orderInCategory="100" app:showAsAction="never" />
 </menu>
