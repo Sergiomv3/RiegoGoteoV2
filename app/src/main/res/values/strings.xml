@@ -8,4 +8,5 @@
     <string name="title_activity_historial">Historial</string>
     <string name="title_activity_averia">Averia</string>
     <string name="title_activity_historial_averias">Historial_averias</string>
+    <string name="title_activity_maps">Map</string>
 </resources>

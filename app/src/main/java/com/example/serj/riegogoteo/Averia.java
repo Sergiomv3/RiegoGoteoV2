@@ -165,6 +165,7 @@ public class Averia extends ActionBarActivity implements Serializable {
         object.addProperty("usuario", averiaEnviada.getUsuario());
         object.addProperty("lt",String.valueOf(averiaEnviada.getLatitud()));
         object.addProperty("lg",String.valueOf(averiaEnviada.getLongitud()));
+        object.addProperty("titulo",titulo);
         object.addProperty("descripcion",averiaEnviada.getDescripcion());
         ParametrosPost p = new ParametrosPost();
         p.url = URLBASE+"reportes";
@@ -279,6 +280,14 @@ public class Averia extends ActionBarActivity implements Serializable {
     public void setTvLongitud(TextView tvLongitud) {
         this.tvLongitud = tvLongitud;
     }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
     //{"sector":"s1","id":"19","titulo":"","estado":"nueva","fecha":"2015-06-06","usuario":"1","lg":"84546","descripcion":"Ronal Mcdonald se come una burguer","lt":"200"}]
 
     public Averia(JSONObject object) {
@@ -287,6 +296,9 @@ public class Averia extends ActionBarActivity implements Serializable {
             this.idSector = object.getString("sector");
             this.titulo = object.getString("titulo");
             this.estado = object.getString("estado");
+            this.descripcion = object.getString("descripcion");
+            this.longitud = Double.valueOf(object.getString("lg"));
+            this.latitud = Double.valueOf(object.getString("lt"));
             try {
 
                 strToDate = format.parse(object.getString("fecha"));
@@ -296,9 +308,9 @@ public class Averia extends ActionBarActivity implements Serializable {
             }
             this.fecha = DateToCalendar(strToDate);
             this.usuario = object.getString(usuario);
-            this.longitud = Double.valueOf(object.getString("lg"));
-            this.descripcion = object.getString("descripcion");
-            this.latitud = Double.valueOf(object.getString("lt"));
+
+
+
 
         } catch (Exception ex){}
     }
