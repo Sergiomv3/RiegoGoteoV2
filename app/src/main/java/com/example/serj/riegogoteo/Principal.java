@@ -47,7 +47,7 @@ import java.util.TimerTask;
 
 public class Principal extends ActionBarActivity {
 
-    private ObjectContainer bd;
+    public static ObjectContainer bd;
     private Spinner spSectores;
     private List<Sector> listaSectores;
     private Sector sectorActual;
@@ -318,6 +318,11 @@ public class Principal extends ActionBarActivity {
             Intent intent = new Intent(Principal.this, Averia.class);
             startActivity(intent);
         }
+        if (id == R.id.action_historial_averia){
+            Intent intent = new Intent(Principal.this, Historial_averias.class);
+            startActivity(intent);
+        }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -458,4 +463,5 @@ public class Principal extends ActionBarActivity {
 
         return sectoresString;
     }
+
 }

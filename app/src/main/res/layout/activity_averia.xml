@@ -54,17 +54,25 @@
                 android:layout_height="wrap_content"
                 android:inputType="textMultiLine"
                 android:ems="10"
-                android:id="@+id/editText"
+                android:id="@+id/etDescripcion"
                 android:layout_weight="18"
                 android:hint="Escribe una descripción de la avería..." />
         </ScrollView>
+
+        <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner"
+            android:background="#3eb1ff" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="ENVIAR AVERÍA"
-            android:id="@+id/button"
-            android:layout_weight="1" />
+            android:id="@+id/btEnviarAveria"
+            android:layout_weight="1"
+            android:nestedScrollingEnabled="false"
+            android:onClick="enviar" />
 
     </LinearLayout>
 </LinearLayout>

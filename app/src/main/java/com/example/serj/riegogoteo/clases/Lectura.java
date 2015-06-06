@@ -29,6 +29,7 @@ public class Lectura implements Serializable{
 
     @SerializedName("sector")
     private String idsector;
+
     SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
     Date strToDate = null;
 

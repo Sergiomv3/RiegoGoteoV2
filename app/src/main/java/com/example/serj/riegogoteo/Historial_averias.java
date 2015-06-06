@@ -15,46 +15,26 @@ import org.json.JSONTokener;
 
 import java.util.ArrayList;
 
-
-public class Historial extends ActionBarActivity {
-    private ArrayList<Lectura> lecturasFromGet = new ArrayList<Lectura>();
-    Lectura lecturasGet;
-    private Adaptador adapter;
+public class Historial_averias extends ActionBarActivity {
+    private ArrayList<Averia> averiasFromGet = new ArrayList<Averia>();
+    Averia averiaGet;
+    private Adaptador2 adaptador2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_historial);
+        setContentView(R.layout.activity_historial_averias);
 
-        String[] peticiones = new String[1]; // SACAMOS PROFESORES
-        peticiones[0] = "lectura";
+        String[] peticiones = new String[1];
+        peticiones[0] = "reportes";
         System.out.println("voy a lanzar get");
         GetRestFul get = new GetRestFul();
         get.execute(peticiones);
         System.out.println("lanzado");
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_historial, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
     private class GetRestFul extends AsyncTask<String, Void, String[]> {
         @Override
         protected String[] doInBackground(String... s) {
@@ -76,14 +56,15 @@ public class Historial extends ActionBarActivity {
                 JSONArray array = new JSONArray(token);
                 for (int i = 0; i < array.length(); i++) {
                     JSONObject object = array.getJSONObject(i);
-                    lecturasGet = new Lectura(object);
-                    lecturasFromGet.add(lecturasGet);
+                    averiaGet = new Averia(object);
+                    averiasFromGet.add(averiaGet);
                 }
                 //System.out.println(lecturasFromGet.size() + " TAMAÑO");
-                adapter = new Adaptador(Historial.this, R.layout.elemento, lecturasFromGet);
-                final ListView lv = (ListView)findViewById(R.id.listView);
-                lv.setAdapter(adapter);
+                adaptador2 = new Adaptador2(Historial_averias.this, R.layout.elemento2, averiasFromGet);
+                final ListView lv = (ListView)findViewById(R.id.listViewAverias);
+                lv.setAdapter(adaptador2);
                 registerForContextMenu(lv);
+
 
             } catch (Exception ex) {
             }
