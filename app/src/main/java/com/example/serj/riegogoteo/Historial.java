@@ -27,7 +27,7 @@ public class Historial extends ActionBarActivity {
         setContentView(R.layout.activity_historial);
 
         String[] peticiones = new String[1]; // SACAMOS PROFESORES
-        peticiones[0] = "lectura";
+        peticiones[0] = "lecturas";
         System.out.println("voy a lanzar get");
         GetRestFul get = new GetRestFul();
         get.execute(peticiones);

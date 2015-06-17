@@ -70,5 +70,6 @@ public class MapsActivity extends FragmentActivity {
      */
     private void setUpMap(double latitud, double longitud) {
         mMap.addMarker(new MarkerOptions().position(new LatLng(latitud, longitud)).title("Avería"));
+        mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
     }
 }
