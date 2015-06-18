@@ -92,13 +92,8 @@ public class Sector implements Comparable<Sector>{
 
     @Override
     public String toString() {
-        return "Sector{" +
-                "id='" + id + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", olivos=" + olivos +
-                ", diaDeRiego=" + diaDeRiego +
-                ", metodoDeRiego=" + metodoDeRiego +
-                ", zona=" + zona +
-                '}';
+        return
+                nombre +
+                ", riego:" + metodoDeRiego;
     }
 }

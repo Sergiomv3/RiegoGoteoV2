@@ -63,7 +63,7 @@ public class Adaptador2 extends ArrayAdapter {
             vh = (ViewHolder) convertView.getTag();
         }
 
-        vh.tvEstado.setText("Estado: " + lista.get(position).getEstado());
+        vh.tvEstado.setText(lista.get(position).getEstado());
         vh.tvFecha2.setText(lista.get(position).getFecha().get(Calendar.YEAR)+"-"+(lista.get(position).getFecha().get(Calendar.MONTH)+1)+"-"+lista.get(position).getFecha().get(Calendar.DAY_OF_MONTH));
         vh.tvTitulo2.setText(lista.get(position).getTitulo());
         vh.tvUsuario2.setText("Reportado por: "+lista.get(position).getUsuario());
@@ -73,7 +73,7 @@ public class Adaptador2 extends ArrayAdapter {
         if(lista.get(position).getEstado().equalsIgnoreCase("nueva")){
             vh.tvEstado.setTextColor(Color.RED);
         }else{
-            vh.tvEstado.setTextColor(Color.GREEN);
+            vh.tvEstado.setTextColor(Color.rgb(76,168,43));
         }
 
 
