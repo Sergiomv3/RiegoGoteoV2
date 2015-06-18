@@ -7,7 +7,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context=".Principal">
+    tools:context=".Principal"
+    android:background="@mipmap/fondoprincipal">
 
     <LinearLayout
         android:orientation="vertical"
@@ -25,7 +26,7 @@
                 android:layout_height="40dp"
                 android:id="@+id/spinnerZonas"
                 android:layout_weight="1"
-                android:background="#ff63cadd"
+                android:background="#72a4b3"
                 android:layout_marginLeft="2dp" />
         </LinearLayout>
 
@@ -40,13 +41,13 @@
                 android:layout_height="200dp"
                 android:layout_centerInParent="true"
                 ProgressWheel:text="RENDIMIENTO %"
-                ProgressWheel:textColor="#222"
-                ProgressWheel:textSize="14sp"
+                ProgressWheel:textColor="#ffffff"
+                ProgressWheel:textSize="20sp"
                 ProgressWheel:rimColor="#330097D6"
                 ProgressWheel:barLength="60dp"
-                ProgressWheel:barColor="#0097D6"
-                ProgressWheel:barWidth="5dp"
-                ProgressWheel:rimWidth="2dp"
+                ProgressWheel:barColor="#25c5d6"
+                ProgressWheel:barWidth="15dp"
+                ProgressWheel:rimWidth="10dp"
                 android:layout_weight="7"
                 android:layout_gravity="center" />
 

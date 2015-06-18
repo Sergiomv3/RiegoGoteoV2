@@ -53,11 +53,11 @@ public class Adaptador extends ArrayAdapter {
             vh = (ViewHolder) convertView.getTag();
         }
 
-        vh.rendimiento.setText("Rendimiento "+ String.valueOf(lista.get(position).getRendimiento())+"%");
-        vh.idSector.setText("Sector "+lista.get(position).getIdsector());
-        vh.fecha.setText("Fecha regado: "+lista.get(position).getFecha().get(Calendar.YEAR)+"-"+(lista.get(position).getFecha().get(Calendar.MONTH)+1)+"-"+lista.get(position).getFecha().get(Calendar.DAY_OF_MONTH));
+        vh.rendimiento.setText(String.valueOf(lista.get(position).getRendimiento())+"%");
+        vh.idSector.setText(lista.get(position).getIdsector());
+        vh.fecha.setText(lista.get(position).getFecha().get(Calendar.YEAR)+"-"+(lista.get(position).getFecha().get(Calendar.MONTH)+1)+"-"+lista.get(position).getFecha().get(Calendar.DAY_OF_MONTH));
         if(lista.get(position).getRendimiento()>70){
-            vh.rendimiento.setTextColor(Color.GREEN);
+            vh.rendimiento.setTextColor(Color.rgb(76,168,43));
         }else{
             vh.rendimiento.setTextColor(Color.RED);
         }

@@ -28,9 +28,10 @@
                 android:text="%"
                 android:id="@+id/tvRendimiento"
                 android:layout_weight="1"
-                android:layout_gravity="center"
                 android:textStyle="bold"
-                android:textColor="#6181ff" />
+                android:textColor="#6181ff"
+                android:layout_gravity="center"
+                android:drawableTop="@mipmap/rendimiento" />
         </LinearLayout>
 
         <LinearLayout
@@ -45,8 +46,12 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Sector:"
                 android:id="@+id/tvSector"
-                android:layout_gravity="center|right"
-                android:layout_weight="1" />
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/woodenfence"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="25dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -54,8 +59,13 @@
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Fecha:"
                 android:id="@+id/tvFecha"
-                android:layout_gravity="center|right"
-                android:layout_weight="1" />
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:drawableLeft="@mipmap/calendar"
+                android:elegantTextHeight="false"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="25dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
